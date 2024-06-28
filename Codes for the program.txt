@@ -1,0 +1,125 @@
+My code for phage genomes that was environmentally isolated from rainforests. I have used the terminal to perform following analysis. The following can be attained by using an environment known as, 'phageinformatics' and the my environment.yaml file possess's the following dependencies:
+
+ - git
+ - fastqc
+ - cutadapt
+ - bbmap
+ - perl-cairo
+ - adapterremoval
+ - spades
+ - trimmomatic
+ - bwa
+ - quast
+ - pharokka==1.7.1
+ - mmseqs2
+ - prokka
+ - abricate
+ - prodigal
+ - blast
+ - diamond
+ - ipython
+ - pandas
+ - seaborn
+ - biopython
+ - taxmyphage
+ - jellyfish
+ - R
+ - soapdenovo2
+ - cd-hit
+ - iqtree
+ - mafft
+
+This genome is a paired-end read that hence I have to use appropriate steps for the cleanup of the reads. These are Illumina sequence reads but we check for them by using the 'less' command the get o know from the format as shown below.
+
+Code:
+>less SRR18218015_1.fastq.gz 
+
+Step 1: Adapter Removal/Trimming and Quality Check.
+
+I have downloaded two files, 'SRR18218015_1.fastq.gz' & 'SRR18218015_2.fastq.gz' and they are the two paired end sequences. 
+One way to check if it is a paired -end read we check for the sync of reads between the file for whihc we will use the 'grep function'.
+or
+we can use FASTQC dependency as a way to read out data and also help to know the sync in the data. A faster command.
+And after whihc we remove the adapters of the sequence to our desired length and specify the direction(i.e. 5' or 3' end of the sequence), with the 'AdapterRemoval function'
+
+Code:
+
+>fastqc -o fastqc SRR18218015_1.fastq.gz SRR18218015_2.fastq.gz
+
+>AdapterRemoval --file1 SRR18218015_1.fastq --file2 SRR18218015_2.fastq --basename SRR18218015 --gzip --trimqualities --trimns  --minquality 30 --minlength 50 --trim5p 20 --trimp3p 15 -t 7
+less SRR18218015.settings
+
+The result of this is a truncated file of both the sequences that is named as, 'SRR18218015.pair1.truncated.gz','SRR18218015.pair2.truncated.gz'. And tthe Adapter removal function will remove the adapter according to a default Adapter sequence which are, `GATCGGAAGAGCACACGTCTGAACTCCAGTCACTTGAGGTGATCTCGTAT` and `GATCGGAAGAGCACACGTCTGAACTCCAGTCACTTGAGGTGATCGCGTAT`.
+
+
+
+Step 2: DeNovo Assembly.
+Now we have our reads trimmed and we are ready to continue the analysis. We might need a few stats of the trimmed data such as read length, minimum length, maximum length, number of reads and number of bases. We use the dependency the function 'fastx_readlength.py' for this.
+
+Code:
+>chmod 755 fastx_readlength.py
+>python fastx_readlength.py --i SRR18218015.pair1.truncated.gz --gz
+>python fastx_readlength.py --i SRR18218015.pair2.truncated.gz --gz
+
+Now we have to count the genome size of the data. It is based on counting the number of k-mers. A 'k-mer' is simply a string of nucleotides of a certain length. we do this using a program called Jellyfish. We are going to ask Jellyfish to count 15-mers and also add counts from the complementary strand. Afterward, we tell it to create a histogram that we will plot using R (but I did not receive this plot and its a problem with this program).
+
+Code:
+>sudo apt install jellyfish
+>gzip -dc SRR18218015.pair*.truncated.gz |jellyfish count -t 2 -m 15 -s 1000000000 -o rfjfish -C /dev/fd/0 *(saving in a new folder called rfjfish)*
+>jellyfish histo rfjf_0 > rfjfish.histo
+
+>R *Opens the R window for commands*
+# Open a PDF device to write the plot
+>pdf("rfjfish.histo.pdf")
+# Read the data from a file
+>dat <- read.table("rfjfish.histo")
+# Create the bar plot with specified parameters
+>barplot(dat[,2], xlim=c(0,150), ylim=c(0,5e5), ylab="No of k-mers", xlab="Counts of a k-mer", names.arg=dat[,1], cex.names=0.8)
+# Close the PDF device to save the plot
+>dev.off()
+
+*This did not work but it seems to be a problem with Jellyfish*
+
+For the De-Novo assembly, we will use a function called SPAdes as an assembly line and we can try to run at a default k-mer size but as a fact, the best k-mer is dependent on the dataset size only comes from several trial runs and the result can be interpreted from the de Bruijn graph. I am using a k-mer size of 33 to be safe. And the k-mer size should be an odd number. Post the assembly, we calculate the statistics using 'Quast' or we can also use 'seqkit' as it will help generate a genome assembly graph in a software called Bandage.
+
+Code:
+>time spades.py -1 SRR18218015.pair1.truncated.gz -2 SRR18218015.pair2.truncated.gz -o SRR18218015spadeskmer33 -k 33 
+>quast.py -o quast.analysis.kmer33 ./SRR18218015spadeskmer33/contigs.fasta
+>cat ./quast.analysis.kmer33/report.txt
+
+*Let's have a look at the assembly statistics using seqkit*
+
+>seqkit stats -a SRR18218015spadeskmer33/contigs.fasta
+
+*What we will find from these results will be largest contig at the top of the list and the smaller ones will follow. We will only extract this largest contig as it will be a part of the genome assembly*
+
+>cat SRR18218015spadeskmer33/contigs.fasta | seqkit grep -r -p NODE_1_> longestcontig.fasta
+>cat longestcontig.fasta | pbcopy
+
+*Once copied, we paste that sequence in NCBI Blast to see which phage genome it could belong to*
+*And we begin downsampling for each paired end read from here, once we confirm the presence of our sequence and re-run the spades assembly on it as the file size is huge for the following steps*
+
+>seqkit stats SRR18218015_1.fastq.gz
+>reformat.sh in1=SRR18218015_1.fastq.gz in2=SRR18218015_2.fastq.gz reads=10000 out1=SRR18218015_10K_1.fastq.gz out2=SRR18218015_10K_2.fastq.gz
+>spades.py -1 SRR18218015_10K_1.fastq.gz -2 SRR18218015_10K_2.fastq.gz -o newspades_results
+
+Now, essentially we will have generated a new file known as, 'newspades_results' where we will have a '.fastg' format file that will contain the complete genome of the phage that needs to be identified. But this can be observed as a complete contig, as a part of many scaffolds using the program Bandage. 
+
+Step 3: Annotation of the gene and gene calling and visualization
+
+As the name of the step suggests, we do exactly that using a program called 'Pharokka'. The developer, in his GitHub site suggests that Pharokka is a rapid standardised annotation tool for bacteriophage genomes and metagenomes. We can achieve this manually as well but that might be by using the 'prodigal' program and downloading the databases for it. However, Pharokka when installed, installs along with it the relevant dependencies and databases and also uses prodigal in its commands to perform the same and much more.
+
+Code:
+>pharokka.py -i phgcontig.fasta -o finalcontig_pharokka -d $CONDA_PREFIX/databases -g prodigal --dnaapler -t 7
+>less finalcontig_pharokka/pharokka.gbk
+*to visualize the genome*
+>pharokka_plotter.py -i phgcontig.fasta -o phgcontig_pharokka
+*we can identify how many proteins we have*
+>cat phgcontig_pharokka/pharokka.gbk|grep product| wc -l
+>cat phgcontig_pharokka/pharokka.gbk|grep product| grep -v -c hypothetical
+>cat phgcontig_pharokka/pharokka.gbk|grep product| grep -c hypothetical 
+
+*Due to some bug with the pharokka version I had downloaded I wasn't able to generate the necessary gbk file but was able to generate everything else that the program does when the command is used*
+
+>conda deactivate
+>exit
