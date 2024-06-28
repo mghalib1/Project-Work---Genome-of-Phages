@@ -1,0 +1,6 @@
+Status: Running Infernal analysis
+Sequence                        		tRNA	Bounds	tRNA	Anti	Intron Bounds	Inf	      
+Name                            	tRNA #	Begin	End	Type	Codon	Begin	End	Score	Note
+--------                        	------	-----	------	----	-----	-----	----	------	------
+NODE_16_length_532_cov_0.750617 	1	339	421	Thr	CGT	373	386	30.3	pseudo
+NODE_21_length_440_cov_1.143770 	1	58 	133	Thr	TGT	0	0	45.6	

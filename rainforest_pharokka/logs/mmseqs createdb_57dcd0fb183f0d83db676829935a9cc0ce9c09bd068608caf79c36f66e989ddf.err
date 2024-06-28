@@ -1,0 +1,1 @@
+Command line: mmseqs createdb rainforest_pharokka/prodigal_aas_tmp.fasta rainforest_pharokka/target_dir/target_seqs

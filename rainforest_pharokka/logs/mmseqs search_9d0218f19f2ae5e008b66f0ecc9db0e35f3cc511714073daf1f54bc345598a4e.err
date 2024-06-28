@@ -1,0 +1,1 @@
+Command line: mmseqs search -e 1E-05 /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/databases/phrogs_profile_db rainforest_pharokka/target_dir/target_seqs rainforest_pharokka/mmseqs/results_mmseqs rainforest_pharokka/tmp_dir/ -s 8.5 --threads 7

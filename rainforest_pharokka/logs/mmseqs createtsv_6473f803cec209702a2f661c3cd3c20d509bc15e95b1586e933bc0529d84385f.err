@@ -1,0 +1,1 @@
+Command line: mmseqs createtsv /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/databases/vfdb rainforest_pharokka/VFDB_target_dir/target_seqs rainforest_pharokka/VFDB/results_mmseqs rainforest_pharokka/vfdb_results.tsv --full-header --threads 7

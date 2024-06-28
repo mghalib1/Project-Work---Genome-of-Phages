@@ -1,0 +1,381 @@
+>Feature NODE_1_length_39991_cov_33.346804
+1	1767	CDS
+			product	terminase large subunit
+			locus_tag	POLZXXJO_CDS_0001
+			transl_table	11
+2065	2223	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0002
+			transl_table	11
+3356	3739	CDS
+			product	ocr-like anti-restriction
+			locus_tag	POLZXXJO_CDS_0003
+			transl_table	11
+3739	3906	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0004
+			transl_table	11
+3896	4069	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0005
+			transl_table	11
+4137	4304	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0006
+			transl_table	11
+4307	4504	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0007
+			transl_table	11
+4504	5061	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0008
+			transl_table	11
+5118	5444	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0009
+			transl_table	11
+5542	8223	CDS
+			product	N4-like RNA polymerase
+			locus_tag	POLZXXJO_CDS_0010
+			transl_table	11
+8236	8436	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0011
+			transl_table	11
+8605	8784	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0012
+			transl_table	11
+8788	9036	CDS
+			product	dGTPase inhibitor
+			locus_tag	POLZXXJO_CDS_0013
+			transl_table	11
+9036	10139	CDS
+			product	DNA ligase
+			locus_tag	POLZXXJO_CDS_0014
+			transl_table	11
+10191	10925	CDS
+			product	DNA methyltransferase
+			locus_tag	POLZXXJO_CDS_0015
+			transl_table	11
+11085	11345	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0016
+			transl_table	11
+11338	11661	CDS
+			product	nucleotide kinase
+			locus_tag	POLZXXJO_CDS_0017
+			transl_table	11
+11837	11995	CDS
+			product	RNA polymerase inhibitor
+			locus_tag	POLZXXJO_CDS_0018
+			transl_table	11
+12053	12751	CDS
+			product	Gp2.5-like ssDNA binding protein and ssDNA annealing protein
+			locus_tag	POLZXXJO_CDS_0019
+			transl_table	11
+12751	13203	CDS
+			product	endonuclease
+			locus_tag	POLZXXJO_CDS_0020
+			transl_table	11
+13200	13625	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0021
+			transl_table	11
+13615	14064	CDS
+			product	endonuclease
+			locus_tag	POLZXXJO_CDS_0022
+			transl_table	11
+14064	14522	CDS
+			product	amidase
+			locus_tag	POLZXXJO_CDS_0023
+			transl_table	11
+14593	16293	CDS
+			product	DNA primase/helicase
+			locus_tag	POLZXXJO_CDS_0024
+			transl_table	11
+16338	16502	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0025
+			transl_table	11
+16574	18745	CDS
+			product	DNA polymerase I
+			locus_tag	POLZXXJO_CDS_0026
+			transl_table	11
+18745	19029	CDS
+			product	Gp5.5-like host HNS inhibition
+			locus_tag	POLZXXJO_CDS_0027
+			transl_table	11
+19026	19235	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0028
+			transl_table	11
+19232	19681	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0029
+			transl_table	11
+19671	20540	CDS
+			product	exonuclease
+			locus_tag	POLZXXJO_CDS_0030
+			transl_table	11
+20751	21023	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0031
+			transl_table	11
+21038	21262	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0032
+			transl_table	11
+21303	21689	CDS
+			product	host range and adsorption protein
+			locus_tag	POLZXXJO_CDS_0033
+			transl_table	11
+21682	21816	CDS
+			product	host range and adsorption protein
+			locus_tag	POLZXXJO_CDS_0034
+			transl_table	11
+21758	22060	CDS
+			product	host range and adsorption protein
+			locus_tag	POLZXXJO_CDS_0035
+			transl_table	11
+22073	23641	CDS
+			product	head-tail adaptor
+			locus_tag	POLZXXJO_CDS_0036
+			transl_table	11
+23757	24641	CDS
+			product	head assembly
+			locus_tag	POLZXXJO_CDS_0037
+			transl_table	11
+24768	25811	CDS
+			product	major head protein
+			locus_tag	POLZXXJO_CDS_0038
+			transl_table	11
+26006	26572	CDS
+			product	tail protein
+			locus_tag	POLZXXJO_CDS_0039
+			transl_table	11
+26572	26799	CDS
+			product	RNA-binding protein
+			locus_tag	POLZXXJO_CDS_0040
+			transl_table	11
+26809	29166	CDS
+			product	tail protein
+			locus_tag	POLZXXJO_CDS_0041
+			transl_table	11
+29253	29726	CDS
+			product	internal virion protein
+			locus_tag	POLZXXJO_CDS_0042
+			transl_table	11
+29710	30297	CDS
+			product	internal virion protein
+			locus_tag	POLZXXJO_CDS_0043
+			transl_table	11
+30309	32591	CDS
+			product	internal virion protein
+			locus_tag	POLZXXJO_CDS_0044
+			transl_table	11
+32596	36492	CDS
+			product	internal virion protein with endolysin domain
+			locus_tag	POLZXXJO_CDS_0045
+			transl_table	11
+36552	38522	CDS
+			product	tail fiber protein
+			locus_tag	POLZXXJO_CDS_0046
+			transl_table	11
+38560	38754	CDS
+			product	holin
+			locus_tag	POLZXXJO_CDS_0047
+			transl_table	11
+38751	39014	CDS
+			product	terminase small subunit
+			locus_tag	POLZXXJO_CDS_0048
+			transl_table	11
+39119	39562	CDS
+			product	Rz-like spanin
+			locus_tag	POLZXXJO_CDS_0049
+			transl_table	11
+39562	39990	CDS
+			product	HNH endonuclease
+			locus_tag	POLZXXJO_CDS_0050
+			transl_table	11
+>Feature NODE_2_length_1403_cov_1.229624
+1	684	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0051
+			transl_table	11
+1035	1223	CDS
+			product	Kil protein for bacterial septation inhibition
+			locus_tag	POLZXXJO_CDS_0052
+			transl_table	11
+1213	1356	CDS
+			product	Erf recombination cofactor Arf
+			locus_tag	POLZXXJO_CDS_0053
+			transl_table	11
+>Feature NODE_3_length_1019_cov_1.651345
+2	1018	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0054
+			transl_table	11
+>Feature NODE_4_length_995_cov_2.571429
+1	282	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0055
+			transl_table	11
+461	994	CDS
+			product	tail spike protein with colonic acid degradation activity
+			locus_tag	POLZXXJO_CDS_0056
+			transl_table	11
+>Feature NODE_5_length_858_cov_1.577291
+2	271	CDS
+			product	head closure Hc3
+			locus_tag	POLZXXJO_CDS_0057
+			transl_table	11
+275	856	CDS
+			product	tail needle protein
+			locus_tag	POLZXXJO_CDS_0058
+			transl_table	11
+>Feature NODE_6_length_833_cov_1.022663
+1	831	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0059
+			transl_table	11
+>Feature NODE_7_length_675_cov_1.266423
+3	170	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0060
+			transl_table	11
+241	663	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0061
+			transl_table	11
+>Feature NODE_8_length_656_cov_1.310019
+288	1	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0062
+			transl_table	11
+457	281	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0063
+			transl_table	11
+656	450	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0064
+			transl_table	11
+>Feature NODE_9_length_650_cov_1.395793
+637	2	CDS
+			product	anti-repressor Ant
+			locus_tag	POLZXXJO_CDS_0065
+			transl_table	11
+>Feature NODE_10_length_624_cov_1.615694
+1	195	CDS
+			product	queuine tRNA-ribosyltransferase
+			locus_tag	POLZXXJO_CDS_0066
+			transl_table	11
+195	425	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0067
+			transl_table	11
+425	622	CDS
+			product	DNA polymerase processivity factor
+			locus_tag	POLZXXJO_CDS_0068
+			transl_table	11
+>Feature NODE_11_length_615_cov_2.202869
+1	483	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0069
+			transl_table	11
+483	614	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0070
+			transl_table	11
+>Feature NODE_12_length_571_cov_1.211712
+95	373	CDS
+			product	CII-like transcriptional activator
+			locus_tag	POLZXXJO_CDS_0071
+			transl_table	11
+>Feature NODE_13_length_563_cov_0.795872
+396	1	CDS
+			product	DNA ejection
+			locus_tag	POLZXXJO_CDS_0072
+			transl_table	11
+563	399	CDS
+			product	head morphogenesis
+			locus_tag	POLZXXJO_CDS_0073
+			transl_table	11
+>Feature NODE_14_length_555_cov_0.649533
+63	1	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0074
+			transl_table	11
+247	44	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0075
+			transl_table	11
+554	465	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0076
+			transl_table	11
+>Feature NODE_15_length_543_cov_0.757212
+3	542	CDS
+			product	tail length tape measure protein
+			locus_tag	POLZXXJO_CDS_0077
+			transl_table	11
+>Feature NODE_16_length_532_cov_0.750617
+88	2	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0078
+			transl_table	11
+339	421	pseudogene
+			product	tRNA-Thr(CGT)
+			locus_tag	POLZXXJO_tRNA_0001
+>Feature NODE_17_length_527_cov_2.275000
+526	239	CDS
+			product	Rz-like spanin
+			locus_tag	POLZXXJO_CDS_0079
+			transl_table	11
+>Feature NODE_18_length_492_cov_1.813699
+491	3	CDS
+			product	head protein
+			locus_tag	POLZXXJO_CDS_0080
+			transl_table	11
+>Feature NODE_19_length_473_cov_1.497110
+134	3	CDS
+			product	transcriptional repressor
+			locus_tag	POLZXXJO_CDS_0081
+			transl_table	11
+245	472	CDS
+			product	transcriptional repressor
+			locus_tag	POLZXXJO_CDS_0082
+			transl_table	11
+>Feature NODE_20_length_469_cov_1.102339
+157	2	CDS
+			product	head protein
+			locus_tag	POLZXXJO_CDS_0083
+			transl_table	11
+468	157	CDS
+			product	head scaffolding protein
+			locus_tag	POLZXXJO_CDS_0084
+			transl_table	11
+>Feature NODE_21_length_440_cov_1.143770
+379	438	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0085
+			transl_table	11
+58	133	tRNA
+			product	tRNA-Thr(TGT)
+			locus_tag	POLZXXJO_tRNA_0002
+>Feature NODE_22_length_439_cov_1.067308
+2	172	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0086
+			transl_table	11
+184	438	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0087
+			transl_table	11
+>Feature NODE_23_length_128_cov_53.000000
+3	128	CDS
+			product	hypothetical protein
+			locus_tag	POLZXXJO_CDS_0088
+			transl_table	11

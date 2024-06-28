@@ -1,0 +1,1 @@
+Command line: mash dist rainforest_pharokka/input_mash_sketch.msh /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/databases/1Aug2023_genomes.fa.msh -d 0.2 -i

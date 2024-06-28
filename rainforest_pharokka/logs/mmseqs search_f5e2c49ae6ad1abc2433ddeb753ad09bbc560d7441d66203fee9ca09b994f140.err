@@ -1,0 +1,1 @@
+Command line: mmseqs search --min-seq-id 0.8 -c 0.4 /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/databases/vfdb rainforest_pharokka/VFDB_target_dir/target_seqs rainforest_pharokka/VFDB/results_mmseqs rainforest_pharokka/VFDB_dir/ -s 8.5 --threads 7

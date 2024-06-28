@@ -1,0 +1,90 @@
+2024-06-08 12:07:53.393 | INFO     | __main__:main:95 - Starting Pharokka v1.7.2
+2024-06-08 12:07:53.394 | INFO     | __main__:main:96 - Command executed: Namespace(infile='./newspades_results/contigs.fasta', outdir='rainforest_pharokka', database='/home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/databases', threads='7', force=True, prefix='Default', locustag='Default', gene_predictor='prodigal', meta=False, split=False, coding_table='11', evalue='1E-05', fast=False, mmseqs2_only=False, meta_hmm=False, dnaapler=True, custom_hmm='', genbank=False, terminase=False, terminase_strand='nothing', terminase_start='nothing', skip_extra_annotations=False, skip_mash=False, minced_args='', mash_distance=0.2, citation=False)
+2024-06-08 12:07:53.394 | INFO     | __main__:main:97 - Repository homepage is https://github.com/gbouras13/pharokka
+2024-06-08 12:07:53.394 | INFO     | __main__:main:98 - Written by George Bouras: george.bouras@adelaide.edu.au
+2024-06-08 12:07:53.394 | INFO     | __main__:main:100 - Checking database installation in /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/databases.
+2024-06-08 12:07:53.395 | INFO     | __main__:main:103 - All databases have been successfully checked.
+2024-06-08 12:07:53.395 | INFO     | __main__:main:119 - Checking dependencies.
+2024-06-08 12:07:53.518 | INFO     | input_commands:check_dependencies:383 - Phanotate version found is v1.5.1
+2024-06-08 12:07:53.519 | INFO     | input_commands:check_dependencies:392 - Phanotate version is ok.
+2024-06-08 12:07:53.522 | INFO     | input_commands:check_dependencies:414 - MMseqs2 version found is v13.45111
+2024-06-08 12:07:53.523 | INFO     | input_commands:check_dependencies:423 - MMseqs2 version is ok.
+2024-06-08 12:07:53.584 | INFO     | input_commands:check_dependencies:447 - tRNAscan-SE version found is v2.0.12
+2024-06-08 12:07:53.584 | INFO     | input_commands:check_dependencies:458 - tRNAscan-SE version is ok.
+2024-06-08 12:07:53.632 | INFO     | input_commands:check_dependencies:482 - MinCED version found is v0.4.2
+2024-06-08 12:07:53.633 | INFO     | input_commands:check_dependencies:493 - MinCED version is ok.
+2024-06-08 12:07:53.634 | INFO     | input_commands:check_dependencies:519 - ARAGORN version found is v1.2.41
+2024-06-08 12:07:53.634 | INFO     | input_commands:check_dependencies:530 - ARAGORN version is ok.
+2024-06-08 12:07:53.642 | INFO     | input_commands:check_dependencies:547 - mash version found is v2.3
+2024-06-08 12:07:53.642 | INFO     | input_commands:check_dependencies:554 - mash version is ok.
+2024-06-08 12:07:54.040 | INFO     | input_commands:check_dependencies:573 - Dnaapler version found is v0.7.0
+2024-06-08 12:07:54.041 | INFO     | input_commands:check_dependencies:580 - Dnaapler version is ok.
+2024-06-08 12:07:54.041 | INFO     | input_commands:check_dependencies:592 - Pyrodigal version is v3.4.1
+2024-06-08 12:07:54.041 | INFO     | input_commands:check_dependencies:593 - Pyrodigal version is ok.
+2024-06-08 12:07:54.041 | INFO     | input_commands:check_dependencies:605 - Pyrodigal_gv version is v0.3.1
+2024-06-08 12:07:54.041 | INFO     | input_commands:check_dependencies:606 - Pyrodigal_gv version is ok.
+2024-06-08 12:07:54.046 | INFO     | input_commands:validate_fasta:230 - Checking input ./newspades_results/contigs.fasta.
+2024-06-08 12:07:54.050 | INFO     | input_commands:validate_fasta:232 - Input ./newspades_results/contigs.fasta is in FASTA format.
+2024-06-08 12:07:54.050 | INFO     | input_commands:validate_fasta:237 - Checking input ./newspades_results/contigs.fasta for duplicate FASTA headers.
+2024-06-08 12:07:54.051 | INFO     | input_commands:validate_fasta:239 - All headers in ./newspades_results/contigs.fasta are unique.
+2024-06-08 12:07:54.051 | INFO     | input_commands:validate_gene_predictor:270 - Prodigal implemented with pyrodigal will be used for gene prediction.
+2024-06-08 12:07:54.051 | INFO     | __main__:main:154 - You have chosen to reorient your contigs by specifying --dnaapler. Checking the input.
+2024-06-08 12:07:54.051 | INFO     | processes:run_dnaapler:992 - Running Dnaapler to rerorient all contigs to begin with the terminase large subunit.
+2024-06-08 12:07:54.052 | INFO     | external_tools:run:50 - Started running dnaapler all -o rainforest_pharokka/dnaapler -t 7 -i ./newspades_results/contigs.fasta ...
+2024-06-08 12:07:55.977 | INFO     | external_tools:run:52 - Done running dnaapler all -o rainforest_pharokka/dnaapler -t 7 -i ./newspades_results/contigs.fasta
+2024-06-08 12:07:55.977 | INFO     | input_commands:validate_meta:305 - More than one contig detected in the input file. Re-running pharokka with -m meta mode is recommended unless this is a fragmented isolate genome. Continuing.
+2024-06-08 12:07:55.978 | INFO     | __main__:main:289 - Implementing Prodigal using Pyrodigal.
+2024-06-08 12:07:56.131 | INFO     | __main__:main:309 - Starting tRNA-scanSE.
+2024-06-08 12:07:56.131 | INFO     | external_tools:run:50 - Started running tRNAscan-SE --thread 7 -G -Q -j rainforest_pharokka/trnascan_out.gff rainforest_pharokka/dnaapler/dnaapler_reoriented.fasta ...
+2024-06-08 12:07:56.964 | INFO     | external_tools:run:52 - Done running tRNAscan-SE --thread 7 -G -Q -j rainforest_pharokka/trnascan_out.gff rainforest_pharokka/dnaapler/dnaapler_reoriented.fasta
+2024-06-08 12:07:56.965 | INFO     | processes:run_minced:822 - Running MinCED.
+2024-06-08 12:07:56.965 | INFO     | external_tools:run:50 - Started running minced rainforest_pharokka/dnaapler/dnaapler_reoriented.fasta rainforest_pharokka/pharokka_minced_spacers.txt rainforest_pharokka/pharokka_minced.gff ...
+2024-06-08 12:07:57.070 | INFO     | external_tools:run:52 - Done running minced rainforest_pharokka/dnaapler/dnaapler_reoriented.fasta rainforest_pharokka/pharokka_minced_spacers.txt rainforest_pharokka/pharokka_minced.gff
+2024-06-08 12:07:57.070 | INFO     | processes:run_aragorn:854 - Running Aragorn.
+2024-06-08 12:07:57.071 | INFO     | external_tools:run:50 - Started running aragorn -l -gcbact -w -m -o rainforest_pharokka/pharokka_aragorn.txt rainforest_pharokka/dnaapler/dnaapler_reoriented.fasta ...
+2024-06-08 12:07:57.087 | INFO     | external_tools:run:52 - Done running aragorn -l -gcbact -w -m -o rainforest_pharokka/pharokka_aragorn.txt rainforest_pharokka/dnaapler/dnaapler_reoriented.fasta
+2024-06-08 12:07:57.087 | INFO     | __main__:main:317 - Starting MMseqs2.
+2024-06-08 12:07:57.088 | INFO     | processes:run_mmseqs:675 - Running MMseqs2 on PHROG Database.
+2024-06-08 12:07:57.088 | INFO     | external_tools:run:50 - Started running mmseqs createdb rainforest_pharokka/prodigal_aas_tmp.fasta rainforest_pharokka/target_dir/target_seqs ...
+2024-06-08 12:07:57.095 | INFO     | external_tools:run:52 - Done running mmseqs createdb rainforest_pharokka/prodigal_aas_tmp.fasta rainforest_pharokka/target_dir/target_seqs
+2024-06-08 12:07:57.096 | INFO     | external_tools:run:50 - Started running mmseqs search -e 1E-05 /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/databases/phrogs_profile_db rainforest_pharokka/target_dir/target_seqs rainforest_pharokka/mmseqs/results_mmseqs rainforest_pharokka/tmp_dir/ -s 8.5 --threads 7 ...
+2024-06-08 12:11:32.924 | INFO     | external_tools:run:52 - Done running mmseqs search -e 1E-05 /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/databases/phrogs_profile_db rainforest_pharokka/target_dir/target_seqs rainforest_pharokka/mmseqs/results_mmseqs rainforest_pharokka/tmp_dir/ -s 8.5 --threads 7
+2024-06-08 12:11:32.925 | INFO     | external_tools:run:50 - Started running mmseqs createtsv /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/databases/phrogs_profile_db rainforest_pharokka/target_dir/target_seqs rainforest_pharokka/mmseqs/results_mmseqs rainforest_pharokka/mmseqs_results.tsv --full-header --threads 7 ...
+2024-06-08 12:11:32.964 | INFO     | external_tools:run:52 - Done running mmseqs createtsv /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/databases/phrogs_profile_db rainforest_pharokka/target_dir/target_seqs rainforest_pharokka/mmseqs/results_mmseqs rainforest_pharokka/mmseqs_results.tsv --full-header --threads 7
+2024-06-08 12:11:32.965 | INFO     | processes:run_mmseqs:675 - Running MMseqs2 on CARD Database.
+2024-06-08 12:11:32.966 | INFO     | external_tools:run:50 - Started running mmseqs createdb rainforest_pharokka/prodigal_aas_tmp.fasta rainforest_pharokka/CARD_target_dir/target_seqs ...
+2024-06-08 12:11:32.979 | INFO     | external_tools:run:52 - Done running mmseqs createdb rainforest_pharokka/prodigal_aas_tmp.fasta rainforest_pharokka/CARD_target_dir/target_seqs
+2024-06-08 12:11:32.980 | INFO     | external_tools:run:50 - Started running mmseqs search --min-seq-id 0.8 -c 0.4 /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/databases/CARD rainforest_pharokka/CARD_target_dir/target_seqs rainforest_pharokka/CARD/results_mmseqs rainforest_pharokka/CARD_dir/ -s 8.5 --threads 7 ...
+2024-06-08 12:12:08.236 | INFO     | external_tools:run:52 - Done running mmseqs search --min-seq-id 0.8 -c 0.4 /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/databases/CARD rainforest_pharokka/CARD_target_dir/target_seqs rainforest_pharokka/CARD/results_mmseqs rainforest_pharokka/CARD_dir/ -s 8.5 --threads 7
+2024-06-08 12:12:08.237 | INFO     | external_tools:run:50 - Started running mmseqs createtsv /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/databases/CARD rainforest_pharokka/CARD_target_dir/target_seqs rainforest_pharokka/CARD/results_mmseqs rainforest_pharokka/CARD_results.tsv --full-header --threads 7 ...
+2024-06-08 12:12:08.282 | INFO     | external_tools:run:52 - Done running mmseqs createtsv /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/databases/CARD rainforest_pharokka/CARD_target_dir/target_seqs rainforest_pharokka/CARD/results_mmseqs rainforest_pharokka/CARD_results.tsv --full-header --threads 7
+2024-06-08 12:12:08.284 | INFO     | processes:run_mmseqs:675 - Running MMseqs2 on VFDB Database.
+2024-06-08 12:12:08.285 | INFO     | external_tools:run:50 - Started running mmseqs createdb rainforest_pharokka/prodigal_aas_tmp.fasta rainforest_pharokka/VFDB_target_dir/target_seqs ...
+2024-06-08 12:12:08.299 | INFO     | external_tools:run:52 - Done running mmseqs createdb rainforest_pharokka/prodigal_aas_tmp.fasta rainforest_pharokka/VFDB_target_dir/target_seqs
+2024-06-08 12:12:08.301 | INFO     | external_tools:run:50 - Started running mmseqs search --min-seq-id 0.8 -c 0.4 /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/databases/vfdb rainforest_pharokka/VFDB_target_dir/target_seqs rainforest_pharokka/VFDB/results_mmseqs rainforest_pharokka/VFDB_dir/ -s 8.5 --threads 7 ...
+2024-06-08 12:13:05.791 | INFO     | external_tools:run:52 - Done running mmseqs search --min-seq-id 0.8 -c 0.4 /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/databases/vfdb rainforest_pharokka/VFDB_target_dir/target_seqs rainforest_pharokka/VFDB/results_mmseqs rainforest_pharokka/VFDB_dir/ -s 8.5 --threads 7
+2024-06-08 12:13:05.792 | INFO     | external_tools:run:50 - Started running mmseqs createtsv /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/databases/vfdb rainforest_pharokka/VFDB_target_dir/target_seqs rainforest_pharokka/VFDB/results_mmseqs rainforest_pharokka/vfdb_results.tsv --full-header --threads 7 ...
+2024-06-08 12:13:05.808 | INFO     | external_tools:run:52 - Done running mmseqs createtsv /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/databases/vfdb rainforest_pharokka/VFDB_target_dir/target_seqs rainforest_pharokka/VFDB/results_mmseqs rainforest_pharokka/vfdb_results.tsv --full-header --threads 7
+2024-06-08 12:13:05.809 | INFO     | __main__:main:348 - Running PyHMMER on PHROGs.
+2024-06-08 12:13:22.721 | INFO     | __main__:main:364 - Post Processing Output.
+2024-06-08 12:13:22.733 | INFO     | post_processing:create_mmseqs_tophits:2146 - Processing MMseqs2 outputs.
+2024-06-08 12:13:22.733 | INFO     | post_processing:create_mmseqs_tophits:2147 - Processing PHROGs output.
+2024-06-08 12:13:22.900 | INFO     | post_processing:process_vfdb_results:2351 - Processing VFDB output.
+2024-06-08 12:13:22.909 | INFO     | post_processing:process_vfdb_results:2437 - 0 VFDB virulence factors identified.
+2024-06-08 12:13:22.909 | INFO     | post_processing:process_card_results:2455 - Processing CARD output.
+2024-06-08 12:13:22.915 | INFO     | post_processing:process_card_results:2578 - 0 CARD AMR genes identified.
+2024-06-08 12:13:23.151 | INFO     | __main__:main:435 - Converting gff to genbank.
+2024-06-08 12:13:23.183 | INFO     | post_processing:extract_terl:1982 - Terminase large subunit found.
+2024-06-08 12:13:23.188 | INFO     | __main__:main:453 - Finding the closest match for each contig in INPHARED using mash.
+2024-06-08 12:13:23.188 | INFO     | external_tools:run:50 - Started running mash sketch rainforest_pharokka/dnaapler/dnaapler_reoriented.fasta -o rainforest_pharokka/input_mash_sketch.msh -i ...
+2024-06-08 12:13:23.203 | INFO     | external_tools:run:52 - Done running mash sketch rainforest_pharokka/dnaapler/dnaapler_reoriented.fasta -o rainforest_pharokka/input_mash_sketch.msh -i
+2024-06-08 12:13:23.204 | INFO     | external_tools:run_to_stdout:59 - Started running mash dist rainforest_pharokka/input_mash_sketch.msh /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/databases/1Aug2023_genomes.fa.msh -d 0.2 -i ...
+2024-06-08 12:13:27.991 | INFO     | external_tools:run_to_stdout:61 - Done running mash dist rainforest_pharokka/input_mash_sketch.msh /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/databases/1Aug2023_genomes.fa.msh -d 0.2 -i
+2024-06-08 12:13:28.162 | INFO     | __main__:main:473 - Pharokka has finished.
+2024-06-08 12:13:28.162 | INFO     | __main__:main:474 - Elapsed time: 334.77 seconds
+2024-06-08 12:13:28.162 | INFO     | __main__:main:476 - If you use Pharokka in your research, please cite:
+2024-06-08 12:13:28.162 | INFO     | __main__:main:477 - George Bouras, Roshan Nepal, Ghais Houtak, Alkis James Psaltis, Peter-John Wormald, Sarah Vreugde.
+2024-06-08 12:13:28.163 | INFO     | __main__:main:480 - Pharokka: a fast scalable bacteriophage annotation tool.
+2024-06-08 12:13:28.163 | INFO     | __main__:main:481 - Bioinformatics, Volume 39, Issue 1, January 2023, btac776.
+2024-06-08 12:13:28.163 | INFO     | __main__:main:482 - https://doi.org/10.1093/bioinformatics/btac776.
+2024-06-08 12:13:28.163 | INFO     | __main__:main:483 - You should also cite the full list of tools Pharokka uses, which can be found at https://github.com/gbouras13/pharokka#citation.

@@ -1,0 +1,47 @@
+>NODE_1_length_39991_cov_33.346804 rotated=True rotated_gene=terL
+0 genes found
+>NODE_2_length_1403_cov_1.229624
+0 genes found
+>NODE_3_length_1019_cov_1.651345
+0 genes found
+>NODE_4_length_995_cov_2.571429
+0 genes found
+>NODE_5_length_858_cov_1.577291
+0 genes found
+>NODE_6_length_833_cov_1.022663 rotated=True rotated_gene=terL
+0 genes found
+>NODE_7_length_675_cov_1.266423
+0 genes found
+>NODE_8_length_656_cov_1.310019
+0 genes found
+>NODE_9_length_650_cov_1.395793
+0 genes found
+>NODE_10_length_624_cov_1.615694
+0 genes found
+>NODE_11_length_615_cov_2.202869 rotated=True rotated_gene=terL
+0 genes found
+>NODE_12_length_571_cov_1.211712
+0 genes found
+>NODE_13_length_563_cov_0.795872
+0 genes found
+>NODE_14_length_555_cov_0.649533
+0 genes found
+>NODE_15_length_543_cov_0.757212
+0 genes found
+>NODE_16_length_532_cov_0.750617
+0 genes found
+>NODE_17_length_527_cov_2.275000
+0 genes found
+>NODE_18_length_492_cov_1.813699
+0 genes found
+>NODE_19_length_473_cov_1.497110
+0 genes found
+>NODE_20_length_469_cov_1.102339
+0 genes found
+>NODE_21_length_440_cov_1.143770
+0 genes found
+>NODE_22_length_439_cov_1.067308
+0 genes found
+>NODE_23_length_128_cov_53.000000
+0 genes found
+>end 	23 sequences 0 tmRNA genes, nothing found in 23 sequences, (0.00% sensitivity)

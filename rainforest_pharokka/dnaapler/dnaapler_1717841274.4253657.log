@@ -1,0 +1,23 @@
+2024-06-08 12:07:54.431 | INFO     | dnaapler.utils.util:begin_dnaapler:71 - You are using dnaapler version 0.7.0
+2024-06-08 12:07:54.431 | INFO     | dnaapler.utils.util:begin_dnaapler:72 - Repository homepage is https://github.com/gbouras13/dnaapler
+2024-06-08 12:07:54.431 | INFO     | dnaapler.utils.util:begin_dnaapler:73 - Written by George Bouras: george.bouras@adelaide.edu.au
+2024-06-08 12:07:54.431 | INFO     | dnaapler.utils.util:begin_dnaapler:74 - Your input FASTA is ./newspades_results/contigs.fasta
+2024-06-08 12:07:54.431 | INFO     | dnaapler.utils.util:begin_dnaapler:75 - Your output directory  is rainforest_pharokka/dnaapler
+2024-06-08 12:07:54.431 | INFO     | dnaapler.utils.util:begin_dnaapler:76 - You have specified 7 threads to use with blastx
+2024-06-08 12:07:54.431 | INFO     | dnaapler.utils.util:begin_dnaapler:77 - You have specified all gene(s) to reorient your sequence
+2024-06-08 12:07:54.431 | INFO     | dnaapler.utils.util:check_blast_version:115 - Checking BLAST installation.
+2024-06-08 12:07:54.543 | INFO     | dnaapler.utils.util:check_blast_version:135 - BLAST version found is v2.15.0.
+2024-06-08 12:07:54.544 | INFO     | dnaapler.utils.util:check_blast_version:145 - BLAST version is ok.
+2024-06-08 12:07:54.544 | INFO     | dnaapler.utils.util:check_pyrodigal_version:90 - Checking pyrodigal installation.
+2024-06-08 12:07:54.544 | INFO     | dnaapler.utils.util:check_pyrodigal_version:101 - Pyrodigal version is v3.4.1
+2024-06-08 12:07:54.545 | INFO     | dnaapler.utils.util:check_pyrodigal_version:102 - Pyrodigal version is ok.
+2024-06-08 12:07:54.545 | INFO     | dnaapler.utils.validation:validate_fasta_all:100 - Checking that the input file ./newspades_results/contigs.fasta is in FASTA format and has at least 1 entry.
+2024-06-08 12:07:54.553 | INFO     | dnaapler.utils.validation:validate_fasta_all:107 - ./newspades_results/contigs.fasta file checked.
+2024-06-08 12:07:54.554 | INFO     | dnaapler.utils.validation:validate_fasta_all:118 - ./newspades_results/contigs.fasta has more than one entry.
+2024-06-08 12:07:54.555 | INFO     | dnaapler.utils.validation:check_evalue:187 - You have specified an evalue of 1e-10.
+2024-06-08 12:07:54.556 | INFO     | dnaapler.utils.external_tools:run:53 - Started running blastx -db /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/lib/python3.10/site-packages/dnaapler/db/all_db -evalue 1e-10 -num_threads 7 -outfmt ' 6 qseqid qlen sseqid slen length qstart qend sstart send pident nident gaps mismatch evalue bitscore qseq sseq ' -out rainforest_pharokka/dnaapler/dnaapler_blast_output.txt -query ./newspades_results/contigs.fasta ...
+2024-06-08 12:07:55.895 | INFO     | dnaapler.utils.external_tools:run:55 - Done running blastx -db /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/lib/python3.10/site-packages/dnaapler/db/all_db -evalue 1e-10 -num_threads 7 -outfmt ' 6 qseqid qlen sseqid slen length qstart qend sstart send pident nident gaps mismatch evalue bitscore qseq sseq ' -out rainforest_pharokka/dnaapler/dnaapler_blast_output.txt -query ./newspades_results/contigs.fasta
+2024-06-08 12:07:55.913 | WARNING  | dnaapler.utils.processing:reorient_single_record_bulk:391 - The top blastx hit for the contig NODE_11_length_615_cov_2.202869 did not begin with a valid start codon.
+2024-06-08 12:07:55.913 | WARNING  | dnaapler.utils.processing:reorient_single_record_bulk:394 - Searching with pyrodigal for the CDS overlapping the most with the top blastx hit to reorient with.
+2024-06-08 12:07:55.918 | INFO     | dnaapler.utils.util:end_dnaapler:158 - dnaapler has finished
+2024-06-08 12:07:55.918 | INFO     | dnaapler.utils.util:end_dnaapler:159 - Elapsed time: 1.49 seconds
