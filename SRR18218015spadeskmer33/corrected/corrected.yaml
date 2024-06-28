@@ -1,0 +1,9 @@
+- "left reads":
+  - "/home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/corrected/SRR18218015.pair1.truncated.fastq.00.0_0.cor.fastq.gz"
+  "number": !!int "1"
+  "orientation": "fr"
+  "right reads":
+  - "/home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/corrected/SRR18218015.pair2.truncated.fastq.00.0_0.cor.fastq.gz"
+  "single reads":
+  - "/home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/corrected/SRR18218015.pair_unpaired.00.0_0.cor.fastq.gz"
+  "type": "paired-end"

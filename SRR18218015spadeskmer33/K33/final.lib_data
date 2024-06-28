@@ -1,0 +1,38 @@
+ê---
+max read length: 266
+nomerge max read length: 266
+average read length: 171.123
+average coverage: 807.314
+libraries:
+  - type:            paired-end
+    number:          1
+    orientation:     fr
+    left reads:
+      - '/home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/corrected/SRR18218015.pair1.truncated.fastq.00.0_0.cor.fastq.gz'
+    right reads:
+      - '/home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/corrected/SRR18218015.pair2.truncated.fastq.00.0_0.cor.fastq.gz'
+    single reads:
+      - '/home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/corrected/SRR18218015.pair_unpaired.00.0_0.cor.fastq.gz'
+    data:
+      unmerged read length: 266
+      merged read length: 0
+      insert size mean: 0
+      insert size deviation: 0
+      insert size left quantile: 0
+      insert size right quantile: 0
+      insert size median: 0
+      insert size mad: 0
+      insert size distribution: {  }
+      pi threshold:    0
+      binary reads info:
+        binary converted: true
+        bin reads info file: '/home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/.bin_reads/INFO_0'
+        paired read prefix: '/home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/.bin_reads/paired_0'
+        merged read prefix: '/home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/.bin_reads/merged_0'
+        single read prefix: '/home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/.bin_reads/single_0'
+        chunk num:       7
+      single reads mapped: false
+      library index:   0
+      number of reads: 1164510
+      total nucleotides: 199273890
+...

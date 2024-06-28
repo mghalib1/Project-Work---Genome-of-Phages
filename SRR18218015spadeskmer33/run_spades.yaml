@@ -1,0 +1,122 @@
+- STAGE: Before start
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: before_start
+- STAGE: Read error correction
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: ec_start
+- STAGE: Read error correction
+  args:
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/corrected/configs/config.info
+  config_dir: corrected
+  del_after:
+  - tmp/hammer_i7he4ijx
+  output_files:
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/corrected/corrected.yaml
+  path: /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/bin/spades-hammer
+  short_name: ec_runtool
+- STAGE: corrected reads compression
+  args:
+  - /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/share/spades/spades_pipeline/scripts/compress_all.py
+  - --input_file
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/corrected/corrected.yaml
+  - --ext_python_modules_home
+  - /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/share/spades
+  - --max_threads
+  - '7'
+  - --output_dir
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/corrected
+  - --gzip_output
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/bin/python
+  short_name: ec_compress
+- STAGE: Read error correction
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: ec_finish
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: as_start
+- STAGE: K33
+  args:
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/K33/configs/config.info
+  config_dir: K33
+  del_after: []
+  output_files: []
+  path: /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/bin/spades-core
+  short_name: k33
+- STAGE: Copy files
+  args:
+  - /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/share/spades/spades_pipeline/scripts/copy_files.py
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/K33/before_rr.fasta
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/before_rr.fasta
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/K33/assembly_graph_after_simplification.gfa
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/assembly_graph_after_simplification.gfa
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/K33/final_contigs.fasta
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/contigs.fasta
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/K33/first_pe_contigs.fasta
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/first_pe_contigs.fasta
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/K33/strain_graph.gfa
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/strain_graph.gfa
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/K33/scaffolds.fasta
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/scaffolds.fasta
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/K33/scaffolds.paths
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/scaffolds.paths
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/K33/assembly_graph_with_scaffolds.gfa
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/assembly_graph_with_scaffolds.gfa
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/K33/assembly_graph.fastg
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/assembly_graph.fastg
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/K33/final_contigs.paths
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/contigs.paths
+  config_dir: ''
+  del_after:
+  - .bin_reads
+  - tmp/spades_99oz282a
+  output_files: []
+  path: /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/bin/python
+  short_name: copy_files
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: as_finish
+- STAGE: Breaking scaffolds
+  args:
+  - /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/share/spades/spades_pipeline/scripts/breaking_scaffolds_script.py
+  - --result_scaffolds_filename
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/scaffolds.fasta
+  - --misc_dir
+  - /home/mghalib/miniconda3/Excercises/phageinformatics_UCPH_June_2024/Rainforestdata/SRR18218015spadeskmer33/misc
+  - --threshold_for_breaking_scaffolds
+  - '3'
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: /home/mghalib/miniconda3/envs/phageinformatics_UCPH_June_2024/bin/python
+  short_name: bs
+- STAGE: Terminate
+  args: []
+  config_dir: ''
+  del_after:
+  - configs
+  output_files: []
+  path: 'true'
+  short_name: terminate
